@@ -4,7 +4,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/user/chores/internal/model"
+	"github.com/kusha/chores-md/internal/model"
 )
 
 func date(y, m, d int) time.Time {

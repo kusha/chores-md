@@ -7,7 +7,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/user/chores/internal/parser"
+	"github.com/kusha/chores-md/internal/parser"
 )
 
 func DoneCmd(file string, choreName string, date time.Time, out io.Writer) error {

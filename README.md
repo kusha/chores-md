@@ -5,14 +5,14 @@ A command-line tool for tracking household chores using a plain-text markdown fi
 ## Installation
 
 ```bash
-go install github.com/user/chores/cmd/chores@latest
+go install github.com/kusha/chores-md/cmd/chores@latest
 ```
 
 Or build from source:
 
 ```bash
-git clone https://github.com/user/chores
-cd chores
+git clone https://github.com/kusha/chores-md
+cd chores-md
 go build ./cmd/chores
 ```
 

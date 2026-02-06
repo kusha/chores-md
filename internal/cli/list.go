@@ -6,8 +6,8 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/user/chores/internal/model"
-	"github.com/user/chores/internal/parser"
+	"github.com/kusha/chores-md/internal/model"
+	"github.com/kusha/chores-md/internal/parser"
 )
 
 func ListCmd(file string, out io.Writer) error {

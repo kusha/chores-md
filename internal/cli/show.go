@@ -5,9 +5,9 @@ import (
 	"io"
 	"time"
 
-	"github.com/user/chores/internal/model"
-	"github.com/user/chores/internal/parser"
-	"github.com/user/chores/internal/schedule"
+	"github.com/kusha/chores-md/internal/model"
+	"github.com/kusha/chores-md/internal/parser"
+	"github.com/kusha/chores-md/internal/schedule"
 )
 
 func ShowCmd(file string, now time.Time, out io.Writer) error {

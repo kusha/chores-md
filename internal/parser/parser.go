@@ -9,7 +9,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/user/chores/internal/model"
+	"github.com/kusha/chores-md/internal/model"
 )
 
 type ParseResult struct {
