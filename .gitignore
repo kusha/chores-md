@@ -1,0 +1,24 @@
+# Build artifacts
+chores
+*.exe
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Planning files (keep private)
+.sisyphus/
+
+# Test artifacts
+coverage.out
+*.test
+
+# Temporary
+*.tmp
+*.log
