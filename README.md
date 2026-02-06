@@ -1,6 +1,82 @@
+<div align="center">
+
+<!-- 
+LOGO INSTRUCTIONS:
+1. Generate logo using ChatGPT with this prompt:
+   "Create a minimalist flat icon logo for a CLI tool called 'chores'.
+    The tool tracks household chores using plain-text markdown files.
+    Style: Minimalist flat icon, suitable for GitHub README
+    Colors: Simple color palette (warm earth tones or clean blues)
+    Elements: Checklist, house silhouette, or calendar motif
+    Size: 128x128, transparent background, no text"
+2. Save as: assets/logo.png
+3. Remove this comment block and uncomment the img tag below
+-->
+
+<!-- <img src="assets/logo.png" alt="chores logo" width="128"/> -->
+
 # chores
 
-A command-line tool for tracking household chores using a plain-text markdown file. Like plain-text accounting, but for chores.
+**Track household chores with plain-text markdown**
+
+[![Build Status](https://img.shields.io/github/actions/workflow/status/kusha/chores-md/ci.yml?branch=main&label=build)](https://github.com/kusha/chores-md/actions)
+[![Release](https://img.shields.io/github/v/release/kusha/chores-md?label=version)](https://github.com/kusha/chores-md/releases)
+[![License](https://img.shields.io/github/license/kusha/chores-md)](LICENSE)
+
+</div>
+
+---
+
+## Table of Contents
+
+- [Why chores?](#why-chores)
+- [Quick Start](#quick-start)
+- [Installation](#installation)
+- [Usage](#usage)
+- [File Format](#file-format)
+- [Demo](#demo)
+- [Roadmap](#roadmap)
+- [License](#license)
+
+---
+
+## Why chores?
+
+When delegating household chores to family members, I needed to document them. But documentation alone wasn't enough—I also needed to track how frequently each chore should be done, and keeping up with that schedule was surprisingly hard.
+
+**chores** solves this by bringing the plain-text philosophy (like plain-text accounting) to household task management:
+
+- 📝 **Plain-text first**: Your data lives in a readable markdown file
+- 🔄 **Git-friendly**: Append-only completion log for clean diffs
+- 🗄️ **No database**: Single file contains everything
+- 🛠️ **Unix-friendly**: Pipe-friendly output, standard exit codes
+- ✏️ **Minimal**: Edit chores in your text editor; CLI only shows status and marks done
+
+No vendor lock-in. No proprietary formats. Just markdown, version control, and any text editor.
+
+---
+
+## Quick Start
+
+1. **Install**:
+   ```bash
+   go install github.com/kusha/chores-md/cmd/chores@latest
+   ```
+
+2. **Create `chores.md`**:
+   ```markdown
+   ## Take Out Trash
+   > 2d
+   
+   2026-02-03 Take Out Trash
+   ```
+
+3. **Run**:
+   ```bash
+   chores show
+   ```
+
+---
 
 ## Installation
 
@@ -15,6 +91,8 @@ git clone https://github.com/kusha/chores-md
 cd chores-md
 go build ./cmd/chores
 ```
+
+---
 
 ## Usage
 
@@ -35,6 +113,8 @@ chores --version                # Show version
 | `-f PATH` | Path to chores file | `./chores.md` |
 
 **Note:** Global flags must come BEFORE the subcommand.
+
+---
 
 ## File Format
 
@@ -115,7 +195,20 @@ Move furniture to get under couch.
 2026-01-28 Vacuum Living Room
 ```
 
-## Output Examples
+---
+
+## Demo
+
+<!--
+SCREENSHOT INSTRUCTIONS:
+1. Create a sample chores.md with overdue, due today, and upcoming items
+2. Run: chores show
+3. Take screenshot using carbon.now.sh (settings: theme=Monokai, font=Fira Code)
+4. Save as: assets/demo.png
+5. Remove this comment block and uncomment the img tag below
+-->
+
+<!-- <img src="assets/demo.png" alt="chores demo" width="800"/> -->
 
 ### `chores show`
 
@@ -153,20 +246,22 @@ Vacuum Living Room	every 1w	Last: 2026-01-28
 Done: "Take Out Trash" (2026-02-04)
 ```
 
-## Design Philosophy
-
-- **Plain-text first**: Your data lives in a readable markdown file
-- **Git-friendly**: Append-only completion log for clean diffs
-- **No database**: Single file contains everything
-- **Unix-friendly**: Pipe-friendly output, standard exit codes
-- **Minimal**: Edit chores in your text editor; CLI only shows status and marks done
-
-## Exit Codes
+### Exit Codes
 
 | Code | Meaning |
 |------|---------|
 | 0 | Success |
 | 1 | Error (file not found, parse error, unknown chore) |
+
+---
+
+## Roadmap
+
+- [ ] Assign chores to people
+- [ ] Stats and analytics
+- [ ] Scheduling options: due date as repeating interval regardless of last execution
+
+---
 
 ## License
 
